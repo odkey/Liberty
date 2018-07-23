@@ -1,0 +1,574 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		234334ED2105CA2500E0A7D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234334EC2105CA2500E0A7D6 /* AppDelegate.swift */; };
+		234334EF2105CA2500E0A7D6 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234334EE2105CA2500E0A7D6 /* GameViewController.swift */; };
+		234334F12105CA2500E0A7D6 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 234334F02105CA2500E0A7D6 /* art.scnassets */; };
+		234334F32105CA2500E0A7D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 234334F22105CA2500E0A7D6 /* Assets.xcassets */; };
+		234334F62105CA2500E0A7D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 234334F42105CA2500E0A7D6 /* Main.storyboard */; };
+		234335022105CA2500E0A7D6 /* LibertyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234335012105CA2500E0A7D6 /* LibertyTests.swift */; };
+		2343350D2105CA2500E0A7D6 /* LibertyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2343350C2105CA2500E0A7D6 /* LibertyUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		234334FE2105CA2500E0A7D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 234334E12105CA2500E0A7D6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 234334E82105CA2500E0A7D6;
+			remoteInfo = Liberty;
+		};
+		234335092105CA2500E0A7D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 234334E12105CA2500E0A7D6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 234334E82105CA2500E0A7D6;
+			remoteInfo = Liberty;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		234334E92105CA2500E0A7D6 /* Liberty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Liberty.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		234334EC2105CA2500E0A7D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		234334EE2105CA2500E0A7D6 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		234334F02105CA2500E0A7D6 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		234334F22105CA2500E0A7D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		234334F52105CA2500E0A7D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		234334F72105CA2500E0A7D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		234334F82105CA2500E0A7D6 /* Liberty.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Liberty.entitlements; sourceTree = "<group>"; };
+		234334FD2105CA2500E0A7D6 /* LibertyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LibertyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		234335012105CA2500E0A7D6 /* LibertyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibertyTests.swift; sourceTree = "<group>"; };
+		234335032105CA2500E0A7D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		234335082105CA2500E0A7D6 /* LibertyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LibertyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2343350C2105CA2500E0A7D6 /* LibertyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibertyUITests.swift; sourceTree = "<group>"; };
+		2343350E2105CA2500E0A7D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		234334E62105CA2500E0A7D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		234334FA2105CA2500E0A7D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		234335052105CA2500E0A7D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		234334E02105CA2500E0A7D6 = {
+			isa = PBXGroup;
+			children = (
+				234334EB2105CA2500E0A7D6 /* Liberty */,
+				234335002105CA2500E0A7D6 /* LibertyTests */,
+				2343350B2105CA2500E0A7D6 /* LibertyUITests */,
+				234334EA2105CA2500E0A7D6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		234334EA2105CA2500E0A7D6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				234334E92105CA2500E0A7D6 /* Liberty.app */,
+				234334FD2105CA2500E0A7D6 /* LibertyTests.xctest */,
+				234335082105CA2500E0A7D6 /* LibertyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		234334EB2105CA2500E0A7D6 /* Liberty */ = {
+			isa = PBXGroup;
+			children = (
+				2343351B2105CA3D00E0A7D6 /* Submodules */,
+				2343351A2105CA3500E0A7D6 /* Sources */,
+				234334EC2105CA2500E0A7D6 /* AppDelegate.swift */,
+				234334EE2105CA2500E0A7D6 /* GameViewController.swift */,
+				234334F02105CA2500E0A7D6 /* art.scnassets */,
+				234334F22105CA2500E0A7D6 /* Assets.xcassets */,
+				234334F42105CA2500E0A7D6 /* Main.storyboard */,
+				234334F72105CA2500E0A7D6 /* Info.plist */,
+				234334F82105CA2500E0A7D6 /* Liberty.entitlements */,
+			);
+			path = Liberty;
+			sourceTree = "<group>";
+		};
+		234335002105CA2500E0A7D6 /* LibertyTests */ = {
+			isa = PBXGroup;
+			children = (
+				234335012105CA2500E0A7D6 /* LibertyTests.swift */,
+				234335032105CA2500E0A7D6 /* Info.plist */,
+			);
+			path = LibertyTests;
+			sourceTree = "<group>";
+		};
+		2343350B2105CA2500E0A7D6 /* LibertyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2343350C2105CA2500E0A7D6 /* LibertyUITests.swift */,
+				2343350E2105CA2500E0A7D6 /* Info.plist */,
+			);
+			path = LibertyUITests;
+			sourceTree = "<group>";
+		};
+		2343351A2105CA3500E0A7D6 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		2343351B2105CA3D00E0A7D6 /* Submodules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Submodules;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		234334E82105CA2500E0A7D6 /* Liberty */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 234335112105CA2500E0A7D6 /* Build configuration list for PBXNativeTarget "Liberty" */;
+			buildPhases = (
+				234334E52105CA2500E0A7D6 /* Sources */,
+				234334E62105CA2500E0A7D6 /* Frameworks */,
+				234334E72105CA2500E0A7D6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Liberty;
+			productName = Liberty;
+			productReference = 234334E92105CA2500E0A7D6 /* Liberty.app */;
+			productType = "com.apple.product-type.application";
+		};
+		234334FC2105CA2500E0A7D6 /* LibertyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 234335142105CA2500E0A7D6 /* Build configuration list for PBXNativeTarget "LibertyTests" */;
+			buildPhases = (
+				234334F92105CA2500E0A7D6 /* Sources */,
+				234334FA2105CA2500E0A7D6 /* Frameworks */,
+				234334FB2105CA2500E0A7D6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				234334FF2105CA2500E0A7D6 /* PBXTargetDependency */,
+			);
+			name = LibertyTests;
+			productName = LibertyTests;
+			productReference = 234334FD2105CA2500E0A7D6 /* LibertyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		234335072105CA2500E0A7D6 /* LibertyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 234335172105CA2500E0A7D6 /* Build configuration list for PBXNativeTarget "LibertyUITests" */;
+			buildPhases = (
+				234335042105CA2500E0A7D6 /* Sources */,
+				234335052105CA2500E0A7D6 /* Frameworks */,
+				234335062105CA2500E0A7D6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2343350A2105CA2500E0A7D6 /* PBXTargetDependency */,
+			);
+			name = LibertyUITests;
+			productName = LibertyUITests;
+			productReference = 234335082105CA2500E0A7D6 /* LibertyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		234334E12105CA2500E0A7D6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Yota Odaka";
+				TargetAttributes = {
+					234334E82105CA2500E0A7D6 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					234334FC2105CA2500E0A7D6 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 234334E82105CA2500E0A7D6;
+					};
+					234335072105CA2500E0A7D6 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 234334E82105CA2500E0A7D6;
+					};
+				};
+			};
+			buildConfigurationList = 234334E42105CA2500E0A7D6 /* Build configuration list for PBXProject "Liberty" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 234334E02105CA2500E0A7D6;
+			productRefGroup = 234334EA2105CA2500E0A7D6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				234334E82105CA2500E0A7D6 /* Liberty */,
+				234334FC2105CA2500E0A7D6 /* LibertyTests */,
+				234335072105CA2500E0A7D6 /* LibertyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		234334E72105CA2500E0A7D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				234334F62105CA2500E0A7D6 /* Main.storyboard in Resources */,
+				234334F32105CA2500E0A7D6 /* Assets.xcassets in Resources */,
+				234334F12105CA2500E0A7D6 /* art.scnassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		234334FB2105CA2500E0A7D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		234335062105CA2500E0A7D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		234334E52105CA2500E0A7D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				234334EF2105CA2500E0A7D6 /* GameViewController.swift in Sources */,
+				234334ED2105CA2500E0A7D6 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		234334F92105CA2500E0A7D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				234335022105CA2500E0A7D6 /* LibertyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		234335042105CA2500E0A7D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2343350D2105CA2500E0A7D6 /* LibertyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		234334FF2105CA2500E0A7D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 234334E82105CA2500E0A7D6 /* Liberty */;
+			targetProxy = 234334FE2105CA2500E0A7D6 /* PBXContainerItemProxy */;
+		};
+		2343350A2105CA2500E0A7D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 234334E82105CA2500E0A7D6 /* Liberty */;
+			targetProxy = 234335092105CA2500E0A7D6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		234334F42105CA2500E0A7D6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				234334F52105CA2500E0A7D6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2343350F2105CA2500E0A7D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		234335102105CA2500E0A7D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		234335122105CA2500E0A7D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Liberty/Liberty.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4NMV6FR8JU;
+				INFOPLIST_FILE = Liberty/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tokyo.odky.Liberty;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		234335132105CA2500E0A7D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Liberty/Liberty.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4NMV6FR8JU;
+				INFOPLIST_FILE = Liberty/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tokyo.odky.Liberty;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		234335152105CA2500E0A7D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4NMV6FR8JU;
+				INFOPLIST_FILE = LibertyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tokyo.odky.LibertyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Liberty.app/Contents/MacOS/Liberty";
+			};
+			name = Debug;
+		};
+		234335162105CA2500E0A7D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4NMV6FR8JU;
+				INFOPLIST_FILE = LibertyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tokyo.odky.LibertyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Liberty.app/Contents/MacOS/Liberty";
+			};
+			name = Release;
+		};
+		234335182105CA2500E0A7D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4NMV6FR8JU;
+				INFOPLIST_FILE = LibertyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tokyo.odky.LibertyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = Liberty;
+			};
+			name = Debug;
+		};
+		234335192105CA2500E0A7D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4NMV6FR8JU;
+				INFOPLIST_FILE = LibertyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tokyo.odky.LibertyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = Liberty;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		234334E42105CA2500E0A7D6 /* Build configuration list for PBXProject "Liberty" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2343350F2105CA2500E0A7D6 /* Debug */,
+				234335102105CA2500E0A7D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		234335112105CA2500E0A7D6 /* Build configuration list for PBXNativeTarget "Liberty" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				234335122105CA2500E0A7D6 /* Debug */,
+				234335132105CA2500E0A7D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		234335142105CA2500E0A7D6 /* Build configuration list for PBXNativeTarget "LibertyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				234335152105CA2500E0A7D6 /* Debug */,
+				234335162105CA2500E0A7D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		234335172105CA2500E0A7D6 /* Build configuration list for PBXNativeTarget "LibertyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				234335182105CA2500E0A7D6 /* Debug */,
+				234335192105CA2500E0A7D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 234334E12105CA2500E0A7D6 /* Project object */;
+}
