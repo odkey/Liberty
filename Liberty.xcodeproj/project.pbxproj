@@ -14,6 +14,9 @@
 		234334F62105CA2500E0A7D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 234334F42105CA2500E0A7D6 /* Main.storyboard */; };
 		234335022105CA2500E0A7D6 /* LibertyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234335012105CA2500E0A7D6 /* LibertyTests.swift */; };
 		2343350D2105CA2500E0A7D6 /* LibertyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2343350C2105CA2500E0A7D6 /* LibertyUITests.swift */; };
+		2343351D2105CABE00E0A7D6 /* Letters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2343351C2105CABE00E0A7D6 /* Letters.swift */; };
+		2343351F2105CB2900E0A7D6 /* Liberty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2343351E2105CB2900E0A7D6 /* Liberty.swift */; };
+		234335212105D04900E0A7D6 /* LettersNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234335202105D04900E0A7D6 /* LettersNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,9 @@
 		234335082105CA2500E0A7D6 /* LibertyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LibertyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2343350C2105CA2500E0A7D6 /* LibertyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibertyUITests.swift; sourceTree = "<group>"; };
 		2343350E2105CA2500E0A7D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2343351C2105CABE00E0A7D6 /* Letters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Letters.swift; sourceTree = "<group>"; };
+		2343351E2105CB2900E0A7D6 /* Liberty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Liberty.swift; sourceTree = "<group>"; };
+		234335202105D04900E0A7D6 /* LettersNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LettersNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +138,9 @@
 		2343351A2105CA3500E0A7D6 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				2343351C2105CABE00E0A7D6 /* Letters.swift */,
+				2343351E2105CB2900E0A7D6 /* Liberty.swift */,
+				234335202105D04900E0A7D6 /* LettersNode.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -277,8 +286,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2343351D2105CABE00E0A7D6 /* Letters.swift in Sources */,
 				234334EF2105CA2500E0A7D6 /* GameViewController.swift in Sources */,
 				234334ED2105CA2500E0A7D6 /* AppDelegate.swift in Sources */,
+				234335212105D04900E0A7D6 /* LettersNode.swift in Sources */,
+				2343351F2105CB2900E0A7D6 /* Liberty.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
