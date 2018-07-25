@@ -1,0 +1,3 @@
+[submodule "Liberty/Submodules/swift_extends"]
+	path = Liberty/Submodules/swift_extends
+	url = https://odkey@github.com/odkey/swift_extends.git
