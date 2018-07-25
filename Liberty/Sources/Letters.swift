@@ -15,10 +15,14 @@ extension Liberty {
 
   class Letters {
     
-    private var letters_: [String]! = ["A"]
-    private var colors_: [NSColor]! = [NSColor.lightGray]
-    private var fontNames_: [String]! = []
-    private var depths_: [CGFloat]! = [0.1]
+    private var letters_: [String]! = ["A","B","C"]
+    private var colors_: [XColor]! = [XColor.lightGray]
+    private var fontNames_: [String]! = ["HelveticaNeue"]
+    private var depths_: [CGFloat]! = [0.01]
+    private var letterSpaces_: [CGFloat]! = [0.0]
+    private var letterSizes_: [CGFloat]! = [0.5]
+ 
+    private var alignType_: LettersHorizontalAlignType! = .left
  
     public var letters: String! {
       get {
@@ -51,7 +55,7 @@ extension Liberty {
       }
     }
     
-    public var colors: [NSColor]! {
+    public var colors: [XColor]! {
       get {
         return self.colors_
       }
@@ -68,6 +72,7 @@ extension Liberty {
       get {
         return self.fontNames_
       }
+      
       set(fontNames) {
         if fontNames.count == 0 {
           print("Font names must be not less than 1")
@@ -81,6 +86,7 @@ extension Liberty {
       get {
         return self.depths_
       }
+      
       set(depths) {
         if depths.count == 0 {
           print("Depths must be not less than 1")
@@ -89,6 +95,49 @@ extension Liberty {
         self.depths_ = depths
       }
     }
+    
+    public var letterSpaces: [CGFloat]! {
+      get {
+        return self.letterSpaces_
+      }
+      
+      set(spaces) {
+        if spaces.count == 0 {
+          print("Letter spaces must be not less than 1")
+          return
+        }
+        self.letterSpaces_ = spaces
+      }
+    }
+    
+    public var letterSizes: [CGFloat]! {
+      get {
+        return self.letterSizes_
+      }
+      
+      set(sizes) {
+        if sizes.count == 0 {
+          print("Letter sizes must be not less than 1")
+          return
+        }
+        self.letterSizes_ = sizes
+      }
+    }
+    
+    public var horizontalAlignType: LettersHorizontalAlignType {
+      get {
+        return self.alignType_
+      }
+      
+      set(alignType) {
+        self.alignType_ = alignType
+      }
+    }
+    
+    public var lettersCount: Int {
+      return self.letterArray.count
+    }
+    
     
     init() { }
     
