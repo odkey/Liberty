@@ -47,6 +47,7 @@ class GameViewController: NSViewController {
     ship.runAction(SCNAction.repeatForever(SCNAction.rotateBy(x: 0, y: 2, z: 0, duration: 1)))
     
     let letters = Liberty.Letters()
+    letters.letters = "あいう"
     letters.letterSpaces = [0, 0.2, 1]
     let lettersNode = letters.createLettersNode()
 //    let lettersNode = Liberty.LettersNode(letters: letters)

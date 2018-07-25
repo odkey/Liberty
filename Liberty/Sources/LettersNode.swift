@@ -23,102 +23,34 @@ extension Liberty {
       }
       
       set(letters) {
-        // Adjust colors count
-        var colors: [XColor]! = letters.colors
-        if letters.colors.count < letters.letters.count {
-          guard let lastColor = letters.colors.last else {
-            return
-          }
-          for _ in letters.colors.count..<letters.letters.count {
-            colors.append(lastColor)
-          }
+        // Adjust property amount
+        let lettersCount = letters.lettersCount
+        guard let colors = self.computeResizedPropertyArray(propertyArray: letters.colors, lettersCount: lettersCount),
+              let fontNames = self.computeResizedPropertyArray(propertyArray: letters.fontNames, lettersCount: lettersCount),
+              let flatnesses = self.computeResizedPropertyArray(propertyArray: letters.flatnesses, lettersCount: lettersCount),
+              let depths = self.computeResizedPropertyArray(propertyArray: letters.depths, lettersCount: lettersCount),
+              let spaces = self.computeResizedPropertyArray(propertyArray: letters.letterSpaces, lettersCount: lettersCount),
+              let sizes = self.computeResizedPropertyArray(propertyArray: letters.letterSizes, lettersCount: lettersCount)
+          else {
+          return
         }
-        else if letters.colors.count > letters.letters.count {
-          for _ in 0..<(letters.colors.count - letters.letters.count) {
-            colors.removeLast()
-          }
-        }
-        
-        // Adjust font names count
-        var fontNames: [String]! = letters.fontNames
-        if letters.fontNames.count < letters.letters.count {
-          guard let lastFontName = letters.fontNames.last else {
-            return
-          }
-          for _ in letters.fontNames.count..<letters.letters.count {
-            fontNames.append(lastFontName)
-          }
-        }
-        else if letters.fontNames.count > letters.letters.count {
-          for _ in 0..<(letters.fontNames.count - letters.letters.count) {
-            fontNames.removeLast()
-          }
-        }
-        
-        // Adjust depths count
-        var depths: [CGFloat]! = letters.depths
-        if letters.depths.count < letters.letters.count {
-          guard let lastDepth = letters.depths.last else {
-            return
-          }
-          for _ in letters.depths.count..<letters.letters.count {
-            depths.append(lastDepth)
-          }
-        }
-        else if letters.depths.count > letters.letters.count {
-          for _ in 0..<(letters.depths.count - letters.letters.count) {
-            depths.removeLast()
-          }
-        }
-        
-        // Adjust lettter spaces count
-        var spaces: [CGFloat]! = letters.letterSpaces
-        if letters.letterSpaces.count < letters.letters.count {
-          guard let lastSpace = letters.letterSpaces.last else {
-            return
-          }
-          for _ in letters.letterSpaces.count..<letters.letters.count {
-            spaces.append(lastSpace)
-          }
-        }
-        else if letters.letterSpaces.count > letters.letters.count {
-          for _ in 0..<(letters.letterSpaces.count - letters.letters.count) {
-            spaces.removeLast()
-          }
-        }
-        
-        // Adjust lettter spaces count
-        var sizes: [CGFloat]! = letters.letterSizes
-        if letters.letterSizes.count < letters.letters.count {
-          guard let lastSize = letters.letterSizes.last else {
-            return
-          }
-          for _ in letters.letterSizes.count..<letters.letters.count {
-            sizes.append(lastSize)
-          }
-        }
-        else if letters.letterSizes.count > letters.letters.count {
-          for _ in letters.letterSizes.count..<letters.letters.count {
-            sizes.removeLast()
-          }
-        }
-        
         self.letters_.letters = letters.letters
         self.letters_.colors = colors
         self.letters_.fontNames = fontNames
+        self.letters_.flatnesses = flatnesses
         self.letters_.depths = depths
         self.letters_.letterSpaces = spaces
         self.letters_.letterSizes = sizes
         self.letters_.horizontalAlignType = letters.horizontalAlignType
         
-        for i in 0..<self.letters_.lettersCount {
-          self.letterNodes_.append(SCNNode())
-        }
+        self.letterNodes_ = [SCNNode](repeating: SCNNode(), count: lettersCount)
       }
     }
     
     override init() {
       super.init()
+      self.letters_ = Liberty.Letters()
+      self.letterNodes_ = []
     }
     
     init(letters: Letters) {
@@ -129,6 +61,8 @@ extension Liberty {
       for (i, letter) in self.letters_.letterArray.enumerated() {
         let textGeo = SCNText(string: letter, extrusionDepth: self.letters.depths[i])
         textGeo.font = XFont(name: self.letters_.fontNames[i], size: self.letters_.letterSizes[i])
+        textGeo.flatness = self.letters_.flatnesses[i]
+        textGeo.firstMaterial?.diffuse.contents = self.letters_.colors[i]
         let node = SCNNode(geometry: textGeo)
         self.letterNodes_.append(node)
         self.addChildNode(node)
@@ -158,6 +92,24 @@ extension Liberty {
       fatalError("init(coder:) has not been implemented")
     }
     
+    private func computeResizedPropertyArray<T>(propertyArray: [T],
+                                        lettersCount: Int) -> [T]? {
+      var properties = propertyArray
+      if propertyArray.count < lettersCount {
+        guard let last = properties.last else {
+          return nil
+        }
+        for _ in propertyArray.count..<lettersCount {
+          properties.append(last)
+        }
+      }
+      else if propertyArray.count > lettersCount {
+        for _ in propertyArray.count..<lettersCount {
+          properties.removeLast()
+        }
+      }
+      return properties
+    }
     
   }
   

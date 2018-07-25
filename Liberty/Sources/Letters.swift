@@ -16,8 +16,9 @@ extension Liberty {
   class Letters {
     
     private var letters_: [String]! = ["A","B","C"]
-    private var colors_: [XColor]! = [XColor.lightGray]
+    private var colors_: [XColor]! = [XColor.red, XColor.green, XColor.blue]
     private var fontNames_: [String]! = ["HelveticaNeue"]
+    private var flatnesses_: [CGFloat]! = [0.001]
     private var depths_: [CGFloat]! = [0.01]
     private var letterSpaces_: [CGFloat]! = [0.0]
     private var letterSizes_: [CGFloat]! = [0.5]
@@ -65,6 +66,7 @@ extension Liberty {
           print("Colors must be not less than 1")
           return
         }
+        self.colors_ = colors
       }
     }
     
@@ -79,6 +81,20 @@ extension Liberty {
           return
         }
         self.fontNames_ = fontNames
+      }
+    }
+    
+    public var flatnesses: [CGFloat]! {
+      get {
+        return self.flatnesses_
+      }
+      
+      set(flatnesses) {
+        if flatnesses.count == 0 {
+          print("Flatnesses must be not less than 1")
+          return
+        }
+        self.flatnesses_ = flatnesses
       }
     }
     
