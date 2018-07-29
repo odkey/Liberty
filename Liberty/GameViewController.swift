@@ -47,18 +47,27 @@ class GameViewController: NSViewController {
     // animate the 3d object
     ship.runAction(SCNAction.repeatForever(SCNAction.rotateBy(x: 0, y: 2, z: 0, duration: 1)))
     ship.isHidden = true
+    
+    let floorNode = SCNNode(geometry: SCNFloor())
+//    scene.rootNode.addChildNode(floorNode)
+    
     let letters = Liberty.Letters()
-    letters.letters = "あいう"
+    letters.letters = "ODKEY"
     letters.letterSpaces = [0, 0.2, 1]
+    letters.letterSizes = [3]
     let lettersNode = letters.createLettersNode()
 //    let lettersNode = Liberty.LettersNode(letters: letters)
     scene.rootNode.addChildNode(lettersNode)
     let rotateAction = SCNAction.group([
-        Liberty.LetterActions.rotateLetter(lettersNode: lettersNode,at: 1, duration: 1, by: SCNVector3(0, 0, CGFloat.pi*1.5), timingMode: .easeInEaseOut),
-        Liberty.LetterActions.rotateLetter(lettersNode: lettersNode,at: 0, duration: 1, by: SCNVector3(0, 0, CGFloat.pi*1.5), timingMode: .linear)
+      Liberty.LetterActions.rotateLetter(lettersNode: lettersNode,at: 1, duration: 1, by: SCNVector3(0, 0, CGFloat.pi*1.5), timingMode: .easeInEaseOut)!,
+      Liberty.LetterActions.rotateLetter(lettersNode: lettersNode,at: 0, duration: 1, by: SCNVector3(0, 0, CGFloat.pi*1.5), timingMode: .linear)!,
       ])
+    let moveActionFore = Liberty.LetterActions.moveLetter(lettersNode: lettersNode, at: 2, duration: 1, by: SCNVector3(1, 0, 0), timingMode: .linear)!
+    let moveActionBack = Liberty.LetterActions.moveLetter(lettersNode: lettersNode, at: 2, duration: 1, by: SCNVector3(-1, 0, 0), timingMode: .linear)!
+    let moveAction = SCNAction.sequence([ moveActionFore, moveActionBack ])
     
-    lettersNode.runAction(SCNAction.repeatForever(rotateAction), completionHandler: {})
+    lettersNode.runAction(SCNAction.repeatForever(rotateAction))
+    lettersNode.runAction(SCNAction.repeatForever(moveAction))
     
     // retrieve the SCNView
     let scnView = self.view as! SCNView

@@ -59,6 +59,7 @@ extension Liberty {
       self.letterNodes_ = []
       print("[letterArray]\(self.letters_.letterArray)")
       for (i, letter) in self.letters_.letterArray.enumerated() {
+        // a b c d e f g h i j k l m n o p q r s t u v w x y z , . : ; ! ?
         let textGeo = SCNText(string: letter, extrusionDepth: self.letters.depths[i])
         textGeo.font = XFont(name: self.letters_.fontNames[i], size: self.letters_.letterSizes[i])
         textGeo.flatness = self.letters_.flatnesses[i]
@@ -83,6 +84,7 @@ extension Liberty {
           offset += width * self.letters.letterSpaces[i]
           print("[offset]\(offset)")
           node.transform = SCNMatrix4MakeTranslation(offset, 0, 0)
+          print(node.transform)
           offset += width
           print("")
         case .center:
