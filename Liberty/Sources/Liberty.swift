@@ -45,7 +45,7 @@ extension Liberty {
   }
   
   internal static func printLog(_ groupName: String, message: String) {
-    print("[Liberty.groupName] \(message)")
+    print("[Liberty.\(groupName)] \(message)")
   }
   
 } // extension Liberty

@@ -73,19 +73,24 @@ extension Liberty {
         self.addChildNode(node)
         
       }
-      var offset: CGFloat = 0
+      var offsetX: CGFloat = 0
       for (i, node) in self.letterNodes_.enumerated() {
+        guard let letters =  self.letters_ else {
+          Liberty.printLog("LettersNode.init", message: "Letters not found.")
+          return
+        }
+        let letterStr = letters.letterArray[i]
         switch self.letters_.horizontalAlignType {
         case .left:
-          guard let (min, max) = node.geometry?.boundingBox else {
-            return
-          }
-          let width = (max - min).x
-          offset += width * self.letters.letterSpaces[i]
-          print("[offset]\(offset)")
-          node.transform = SCNMatrix4MakeTranslation(offset, 0, 0)
+          let (min, max) = node.boundingBox
+          let width = max.x - min.x
+          Liberty.printLog("LettersNode.init", message: "letter: \(letterStr), width: \(width), width+space: \(width * self.letters.letterSpaces[i]), pivot:\(node.pivot.m41)")
+          offsetX += width * self.letters.letterSpaces[i]
+          offsetX += width / 2
+          print("[offsetX]\(offsetX)")
+          node.transform = SCNMatrix4MakeTranslation(offsetX, node.pivot.m42, 0)
           print(node.transform)
-          offset += width
+          offsetX += width/2
           print("")
         case .center:
           print("")

@@ -52,8 +52,8 @@ class GameViewController: NSViewController {
 //    scene.rootNode.addChildNode(floorNode)
     
     let letters = Liberty.Letters()
-    letters.letters = "ODKEY"
-    letters.letterSpaces = [0, 0.2, 1]
+    letters.letters = "ODあっ亜ayh今日は"
+    letters.letterSpaces = [0.1]
     letters.letterSizes = [3]
     let lettersNode = letters.createLettersNode()
 //    let lettersNode = Liberty.LettersNode(letters: letters)
@@ -66,8 +66,8 @@ class GameViewController: NSViewController {
     let moveActionBack = Liberty.LetterActions.moveLetter(lettersNode: lettersNode, at: 2, duration: 1, by: SCNVector3(-1, 0, 0), timingMode: .linear)!
     let moveAction = SCNAction.sequence([ moveActionFore, moveActionBack ])
     
-    lettersNode.runAction(SCNAction.repeatForever(rotateAction))
-    lettersNode.runAction(SCNAction.repeatForever(moveAction))
+//    lettersNode.runAction(SCNAction.repeatForever(rotateAction))
+//    lettersNode.runAction(SCNAction.repeatForever(moveAction))
     
     // retrieve the SCNView
     let scnView = self.view as! SCNView
