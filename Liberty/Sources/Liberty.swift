@@ -27,8 +27,8 @@
   typealias XBezierPath = NSBezierPath
   typealias XScrollView = NSScrollView
   typealias XViewController = NSViewController
-  
 
+#endif
 
 public class Liberty {
   
@@ -44,6 +44,4 @@ extension Liberty {
     
   }
   
-}
-
-#endif
+} // extension Liberty

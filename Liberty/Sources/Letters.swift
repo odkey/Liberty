@@ -167,9 +167,4 @@ extension Liberty {
     
   }
 
-}
-
-extension Liberty.Letters {
-
-  
-}
+} // extension Liberty

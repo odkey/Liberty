@@ -64,8 +64,13 @@ extension Liberty {
         textGeo.flatness = self.letters_.flatnesses[i]
         textGeo.firstMaterial?.diffuse.contents = self.letters_.colors[i]
         let node = SCNNode(geometry: textGeo)
+        let (min, max) = node.boundingBox
+        node.pivot = SCNMatrix4MakeTranslation(min.x + (max.x - min.x)/2,
+                                               min.y + (max.y - min.y)/2,
+                                               min.z + (max.z - min.z)/2)
         self.letterNodes_.append(node)
         self.addChildNode(node)
+        
       }
       var offset: CGFloat = 0
       for (i, node) in self.letterNodes_.enumerated() {
@@ -113,4 +118,4 @@ extension Liberty {
     
   }
   
-}
+} // extension Liberty

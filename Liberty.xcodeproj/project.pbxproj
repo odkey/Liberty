@@ -30,6 +30,7 @@
 		234335422107F4F800E0A7D6 /* SCNQuaternion+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234335312107F4F800E0A7D6 /* SCNQuaternion+Util.swift */; };
 		234335432107F4F800E0A7D6 /* matrix_float4x4+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234335322107F4F800E0A7D6 /* matrix_float4x4+Util.swift */; };
 		234335442107F4F800E0A7D6 /* SCNVector3+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234335332107F4F800E0A7D6 /* SCNVector3+Util.swift */; };
+		23433546210A19B500E0A7D6 /* LetterActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23433545210A19B500E0A7D6 /* LetterActions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		234335312107F4F800E0A7D6 /* SCNQuaternion+Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SCNQuaternion+Util.swift"; sourceTree = "<group>"; };
 		234335322107F4F800E0A7D6 /* matrix_float4x4+Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "matrix_float4x4+Util.swift"; sourceTree = "<group>"; };
 		234335332107F4F800E0A7D6 /* SCNVector3+Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SCNVector3+Util.swift"; sourceTree = "<group>"; };
+		23433545210A19B500E0A7D6 /* LetterActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterActions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 				2343351C2105CABE00E0A7D6 /* Letters.swift */,
 				2343351E2105CB2900E0A7D6 /* Liberty.swift */,
 				234335202105D04900E0A7D6 /* LettersNode.swift */,
+				23433545210A19B500E0A7D6 /* LetterActions.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				234334ED2105CA2500E0A7D6 /* AppDelegate.swift in Sources */,
 				234335212105D04900E0A7D6 /* LettersNode.swift in Sources */,
 				234335362107F4F800E0A7D6 /* CGFloat+Util.swift in Sources */,
+				23433546210A19B500E0A7D6 /* LetterActions.swift in Sources */,
 				234335442107F4F800E0A7D6 /* SCNVector3+Util.swift in Sources */,
 				2343351F2105CB2900E0A7D6 /* Liberty.swift in Sources */,
 			);

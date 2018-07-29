@@ -43,16 +43,22 @@ class GameViewController: NSViewController {
     // retrieve the ship node
     let ship = scene.rootNode.childNode(withName: "ship", recursively: true)!
     
+    
     // animate the 3d object
     ship.runAction(SCNAction.repeatForever(SCNAction.rotateBy(x: 0, y: 2, z: 0, duration: 1)))
-    
+    ship.isHidden = true
     let letters = Liberty.Letters()
     letters.letters = "あいう"
     letters.letterSpaces = [0, 0.2, 1]
     let lettersNode = letters.createLettersNode()
 //    let lettersNode = Liberty.LettersNode(letters: letters)
     scene.rootNode.addChildNode(lettersNode)
+    let rotateAction = SCNAction.group([
+        Liberty.LetterActions.rotateLetter(lettersNode: lettersNode,at: 1, duration: 1, by: SCNVector3(0, 0, CGFloat.pi*1.5), timingMode: .easeInEaseOut),
+        Liberty.LetterActions.rotateLetter(lettersNode: lettersNode,at: 0, duration: 1, by: SCNVector3(0, 0, CGFloat.pi*1.5), timingMode: .linear)
+      ])
     
+    lettersNode.runAction(SCNAction.repeatForever(rotateAction), completionHandler: {})
     
     // retrieve the SCNView
     let scnView = self.view as! SCNView
