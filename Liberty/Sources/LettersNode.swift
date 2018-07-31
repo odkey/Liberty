@@ -104,6 +104,14 @@ extension Liberty {
       fatalError("init(coder:) has not been implemented")
     }
     
+    public func getLetterNode(at index: Int) -> SCNNode? {
+      if index < 0 || self.letterNodes_.count <= index {
+        Liberty.printLog("LetterNode.getLetterNode", message: "Out of index.")
+        return nil
+      }
+      return self.letterNodes_[index]
+    }
+    
     private func computeResizedPropertyArray<T>(propertyArray: [T],
                                         lettersCount: Int) -> [T]? {
       var properties = propertyArray
