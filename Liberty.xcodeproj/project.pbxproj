@@ -31,6 +31,11 @@
 		234335432107F4F800E0A7D6 /* matrix_float4x4+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234335322107F4F800E0A7D6 /* matrix_float4x4+Util.swift */; };
 		234335442107F4F800E0A7D6 /* SCNVector3+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234335332107F4F800E0A7D6 /* SCNVector3+Util.swift */; };
 		23433546210A19B500E0A7D6 /* LetterActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23433545210A19B500E0A7D6 /* LetterActions.swift */; };
+		23DA2529212D6CE8000CDB56 /* XColor+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DA2524212D6CE7000CDB56 /* XColor+Util.swift */; };
+		23DA252A212D6CE8000CDB56 /* Import.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DA2525212D6CE7000CDB56 /* Import.swift */; };
+		23DA252B212D6CE8000CDB56 /* XView+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DA2526212D6CE8000CDB56 /* XView+Util.swift */; };
+		23DA252C212D6CE8000CDB56 /* XViewController+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DA2527212D6CE8000CDB56 /* XViewController+Util.swift */; };
+		23DA252D212D6CE8000CDB56 /* XImage+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DA2528212D6CE8000CDB56 /* XImage+Util.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +87,11 @@
 		234335322107F4F800E0A7D6 /* matrix_float4x4+Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "matrix_float4x4+Util.swift"; sourceTree = "<group>"; };
 		234335332107F4F800E0A7D6 /* SCNVector3+Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SCNVector3+Util.swift"; sourceTree = "<group>"; };
 		23433545210A19B500E0A7D6 /* LetterActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterActions.swift; sourceTree = "<group>"; };
+		23DA2524212D6CE7000CDB56 /* XColor+Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XColor+Util.swift"; sourceTree = "<group>"; };
+		23DA2525212D6CE7000CDB56 /* Import.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Import.swift; sourceTree = "<group>"; };
+		23DA2526212D6CE8000CDB56 /* XView+Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XView+Util.swift"; sourceTree = "<group>"; };
+		23DA2527212D6CE8000CDB56 /* XViewController+Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XViewController+Util.swift"; sourceTree = "<group>"; };
+		23DA2528212D6CE8000CDB56 /* XImage+Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XImage+Util.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +195,11 @@
 		234335222107F4F800E0A7D6 /* swift_extends */ = {
 			isa = PBXGroup;
 			children = (
+				23DA2525212D6CE7000CDB56 /* Import.swift */,
+				23DA2524212D6CE7000CDB56 /* XColor+Util.swift */,
+				23DA2528212D6CE8000CDB56 /* XImage+Util.swift */,
+				23DA2526212D6CE8000CDB56 /* XView+Util.swift */,
+				23DA2527212D6CE8000CDB56 /* XViewController+Util.swift */,
 				234335242107F4F800E0A7D6 /* SCNNode+Util.swift */,
 				234335252107F4F800E0A7D6 /* CGFloat+Util.swift */,
 				234335262107F4F800E0A7D6 /* String+Util.swift */,
@@ -344,12 +359,17 @@
 				234335372107F4F800E0A7D6 /* String+Util.swift in Sources */,
 				234335382107F4F800E0A7D6 /* Float+Util.swift in Sources */,
 				234335432107F4F800E0A7D6 /* matrix_float4x4+Util.swift in Sources */,
+				23DA252C212D6CE8000CDB56 /* XViewController+Util.swift in Sources */,
+				23DA252D212D6CE8000CDB56 /* XImage+Util.swift in Sources */,
 				234335402107F4F800E0A7D6 /* Odkey+Util.swift in Sources */,
 				234335392107F4F800E0A7D6 /* Bool+Util.swift in Sources */,
 				2343353C2107F4F800E0A7D6 /* Int+Util.swift in Sources */,
 				234334EF2105CA2500E0A7D6 /* GameViewController.swift in Sources */,
 				2343353A2107F4F800E0A7D6 /* NSObject+Util.swift in Sources */,
 				234334ED2105CA2500E0A7D6 /* AppDelegate.swift in Sources */,
+				23DA2529212D6CE8000CDB56 /* XColor+Util.swift in Sources */,
+				23DA252B212D6CE8000CDB56 /* XView+Util.swift in Sources */,
+				23DA252A212D6CE8000CDB56 /* Import.swift in Sources */,
 				234335212105D04900E0A7D6 /* LettersNode.swift in Sources */,
 				234335362107F4F800E0A7D6 /* CGFloat+Util.swift in Sources */,
 				23433546210A19B500E0A7D6 /* LetterActions.swift in Sources */,
@@ -514,7 +534,7 @@
 				CODE_SIGN_ENTITLEMENTS = Liberty/Liberty.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 4NMV6FR8JU;
+				DEVELOPMENT_TEAM = E87QDFCSWD;
 				INFOPLIST_FILE = Liberty/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tokyo.odky.Liberty;
@@ -530,7 +550,7 @@
 				CODE_SIGN_ENTITLEMENTS = Liberty/Liberty.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 4NMV6FR8JU;
+				DEVELOPMENT_TEAM = E87QDFCSWD;
 				INFOPLIST_FILE = Liberty/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tokyo.odky.Liberty;
